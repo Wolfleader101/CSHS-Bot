@@ -14,7 +14,7 @@ const ytdl = require('ytdl-core');
 // grab commands
 const fs = require('fs');
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-const general =  message.guild.channels.find(`general`)
+const general =  guild.channels.find(`general`)
 
 // set new item in collection,
 for (const file of commandFiles) {
