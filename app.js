@@ -14,7 +14,7 @@ const ytdl = require('ytdl-core');
 // grab commands
 const fs = require('fs');
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-const general =  guild.channels.find(`general`)
+
 
 // set new item in collection,
 for (const file of commandFiles) {
@@ -41,24 +41,28 @@ process.on('unhandledRejection', err => console.error(`Uncaught Promise Error: \
 
 //if server gets deleted
 client.on('guildDelete', guild => {
+  let general =  guild.channels.find(`general`)
   console.log(`I have left ${guild.name} at ${new Date()}`);
 
 });
 
 //when bot joins server
 client.on('guildCreate', guild => {
+  let general =  guild.channels.find(`general`)
   guild.channels.get(general).send(`CSHS Bot has joined the server and is ready for action! ${guild.name}`);
 });
 
 //when member joins server
 client.on('guildMemberAdd', member => {
   let guild = member.guild;
+  let general =  guild.channels.find(`general`)
   guild.channels.get(general).send(`Welcome, ${member.user} to Wolf Pack!`);
 });
 
 //when member leaves server
 client.on('guildMemberRemove', member => {
   let guild = member.guild;
+  let general =  guild.channels.find(`general`)
   guild.channels.get(general).send(`${member.user} left the server :sob: :sob:`);
 });
 
