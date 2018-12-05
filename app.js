@@ -14,6 +14,7 @@ const ytdl = require('ytdl-core');
 // grab commands
 const fs = require('fs');
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+const general =  message.guild.channels.find(`general`)
 
 // set new item in collection,
 for (const file of commandFiles) {
@@ -46,20 +47,22 @@ client.on('guildDelete', guild => {
 
 //when bot joins server
 client.on('guildCreate', guild => {
-  guild.channels.get('510608258147287053').send(`CSHS Bot has joined the server and is ready for action! ${guild.name}`);
+  guild.channels.get(general).send(`CSHS Bot has joined the server and is ready for action! ${guild.name}`);
 });
 
 //when member joins server
 client.on('guildMemberAdd', member => {
   let guild = member.guild;
-  guild.channels.get('510608258147287053').send(`Welcome, ${member.user} to Wolf Pack!`);
+  guild.channels.get(general).send(`Welcome, ${member.user} to Wolf Pack!`);
 });
 
 //when member leaves server
 client.on('guildMemberRemove', member => {
   let guild = member.guild;
-  guild.channels.get('510608258147287053').send(`${member.user} left the server :sob: :sob:`);
+  guild.channels.get(general).send(`${member.user} left the server :sob: :sob:`);
 });
+
+// This is not working!
 
 //logs Member update e.g roles
 /*client.on('guildMemberUpdate', (oMember, nMember) => {
@@ -72,15 +75,16 @@ client.on('guildUpdate', (oGuild, nGuild) => {
 });
 */
 
+
 //when user is banned
 client.on('guildBanAdd', (guild, user) => {
-  guild.channels.get('510608258147287053').send(`${user} was just banned! DON'T BE NAUGHTY :rage:  :rage: `);
+  guild.channels.get(general).send(`${user} was just banned! DON'T BE NAUGHTY :rage:  :rage: `);
   console.log(`${user} was just banned`);
 });
 
 //when user is unbanned
 client.on('guildBanRemove', (guild, user) => {
-  guild.channels.get('510608258147287053').send(`${user} was just unbanned! YAY!! :heart: :grinning:  `);
+  guild.channels.get(general).send(`${user} was just unbanned! YAY!! :heart: :grinning:  `);
   console.log(`${user} was just unbanned`);
 });
 
