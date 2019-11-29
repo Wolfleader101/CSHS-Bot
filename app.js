@@ -56,7 +56,7 @@ client.on('guildCreate', guild => {
 client.on('guildMemberAdd', member => {
   let guild = member.guild;
   let general =  guild.channels.find(`general`)
-  guild.channels.get(general).send(`Welcome, ${member.user} to Wolf Pack!`);
+  guild.channels.get(general).send(`Welcome, ${member.user} to ${guild.name}!`);
 });
 
 //when member leaves server
