@@ -8,7 +8,7 @@ client.commands = new Discord.Collection();
 
 // other modules
 const ddiff = require('return-deep-diff');
-const broadcast = client.createVoiceBroadcast();
+const broadcast = client.voice.createBroadcast();
 const ytdl = require('ytdl-core');
 
 // grab commands

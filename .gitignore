@@ -80,3 +80,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 config.json
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/CSHS-Bot.iml

@@ -9,7 +9,7 @@
   "author": "Wolfleader101",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "discordjs/discord.js",
+    "discord.js": "github:discordjs/discord.js",
     "ffmpeg": "0.0.4",
     "opusscript": "0.0.6",
     "prism-media": "0.0.3",
