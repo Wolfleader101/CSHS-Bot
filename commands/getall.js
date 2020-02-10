@@ -23,12 +23,9 @@ module.exports = {
         });
         
         //example of what to do with the users
-        //message.channel.send(Users);
+        message.channel.send(Users);
 
-        const data = 
-        {
-            DiscordUsers: Users
-        };
+        const data = {Users};
         // replace this with your own URL
         fetch('https://httpbin.org/post', {
                 method: 'post',
