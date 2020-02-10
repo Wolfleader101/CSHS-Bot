@@ -30,9 +30,9 @@ module.exports = {
             DiscordUsers: Users
         };
         // replace this with your own URL
-        fetch('http://localhost:3302/PostUser', {
+        fetch('https://httpbin.org/post', {
                 method: 'post',
-                body: data,
+                body: JSON.stringify(data),
                 headers: {
                     'Content-Type': 'application/json'
                 },
