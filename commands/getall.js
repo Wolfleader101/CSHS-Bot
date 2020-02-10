@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 module.exports = {
     name: 'getall',
     execute(message, args) {
@@ -17,9 +19,22 @@ module.exports = {
             // add each user to the array when looping
             Users.push(User);
 
-           
+
         });
-         //example of what to do with the users
-         message.channel.send(Users);
+        //example of what to do with the users
+        message.channel.send(Users);
+
+        const body = {Users};
+
+        // replace this with your own URL
+        fetch('https://httpbin.org/post', {
+                method: 'post',
+                body: JSON.stringify(body),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            })
+            .then(res => res.json())
+            .then(json => console.log(json));
     },
 };
