@@ -21,20 +21,23 @@ module.exports = {
 
 
         });
+        
         //example of what to do with the users
-        message.channel.send(Users);
+        //message.channel.send(Users);
 
-        const body = {Users};
-
+        const data = 
+        {
+            DiscordUsers: Users
+        };
         // replace this with your own URL
-        fetch('https://httpbin.org/post', {
+        fetch('http://localhost:3302/PostUser', {
                 method: 'post',
-                body: JSON.stringify(body),
+                body: data,
                 headers: {
                     'Content-Type': 'application/json'
                 },
             })
-            .then(res => res.json())
-            .then(json => console.log(json));
+            .then(res => console.log(res))
+            // .then(json => console.log(json));
     },
 };
