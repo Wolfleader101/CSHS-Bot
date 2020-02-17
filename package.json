@@ -18,6 +18,6 @@
     "prism-media": "0.0.3",
     "return-deep-diff": "^0.3.0",
     "ytdl": "^0.10.4",
-    "ytdl-core": "^0.28.0"
+    "ytdl-core": "^1.0.9"
   }
 }
