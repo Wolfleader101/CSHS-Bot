@@ -14,7 +14,7 @@
     "discord.js": "github:discordjs/discord.js",
     "ffmpeg": "0.0.4",
     "node-fetch": "^2.6.0",
-    "opusscript": "0.0.6",
+    "opusscript": "0.0.7",
     "prism-media": "0.0.3",
     "return-deep-diff": "^0.3.0",
     "ytdl": "^0.10.4",
