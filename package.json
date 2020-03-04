@@ -16,7 +16,7 @@
     "node-fetch": "^2.6.0",
     "opusscript": "0.0.7",
     "prism-media": "0.0.3",
-    "return-deep-diff": "^0.3.0",
+    "return-deep-diff": "^0.4.0",
     "ytdl": "^0.10.4",
     "ytdl-core": "^0.28.0"
   }
